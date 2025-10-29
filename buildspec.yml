@@ -1,30 +1,29 @@
 version: 0.2
 
 phases:
-  pre_build:
+  install:
+    runtime-versions:
+      nodejs: 20  # ← Add this to use Node 20
     commands:
       - echo "📦 Installing dependencies..."
-      - npm ci
-      
+      - npm install  # Use npm install instead of npm ci
+  
   build:
     commands:
       - echo "🏗️ Building React app..."
       - npm run build
-      - echo "✅ Build completed!"
-      
+  
   post_build:
     commands:
-      - echo "📤 Uploading to S3..."
-      - aws s3 sync build/ s3://restaurant-react-app-00009/ --delete
-      - echo "🔄 Invalidating CloudFront cache..."
-      - aws cloudfront create-invalidation --distribution-id E2U5JJQA48C47Z --paths "/*"
-      - echo "🎉 Deployment complete!"
+      - echo "✅ Build successful!"
+      - ls -la build/
 
 artifacts:
   files:
     - '**/*'
   base-directory: build
-  
+  name: frontend-build
+
 cache:
   paths:
     - 'node_modules/**/*'
