@@ -3,10 +3,10 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 20  # ← Add this to use Node 20
+      nodejs: 20
     commands:
       - echo "📦 Installing dependencies..."
-      - npm install  # Use npm install instead of npm ci
+      - npm install
   
   build:
     commands:
@@ -16,7 +16,11 @@ phases:
   post_build:
     commands:
       - echo "✅ Build successful!"
-      - ls -la build/
+      - echo "🚀 Deploying to S3..."
+      - aws s3 sync build/ s3://restaurant-react-app-00009 --delete
+      - echo "🔄 Invalidating CloudFront cache..."
+      - aws cloudfront create-invalidation --distribution-id E2U5JJQA48C47Z --paths "/*"
+      - echo "✨ Deployment complete!"
 
 artifacts:
   files:
