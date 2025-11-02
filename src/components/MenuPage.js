@@ -200,7 +200,7 @@ const MenuPage = ({ user, addToCart }) => {
       {/* Hero Section */}
       <section style={styles.hero}>
         <h1 style={styles.heroTitle}>
-          Delicious Food Delivered Quick maro🍕
+          Delicious Food Delivered Quick mar🍕
         </h1>
         <p style={styles.heroSubtitle}>
           Craving something tasty? Order from our curated menu of mouth-watering dishes, 
