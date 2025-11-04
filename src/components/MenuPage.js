@@ -200,7 +200,7 @@ const MenuPage = ({ user, addToCart }) => {
       {/* Hero Section */}
       <section style={styles.hero}>
         <h1 style={styles.heroTitle}>
-          Delicious Food Delivered Quick Marwan is best🍕
+          Delicious Food Delivered 🍕
         </h1>
         <p style={styles.heroSubtitle}>
           Craving something tasty? Order from our curated menu of mouth-watering dishes, 
