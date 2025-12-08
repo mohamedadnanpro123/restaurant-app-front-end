@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import App from './App';
-import './styles-red-mobile.css';  // ← ADD THIS LINE
+import './styles-premium-mobile.css';  // ← ADD THIS LINE
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

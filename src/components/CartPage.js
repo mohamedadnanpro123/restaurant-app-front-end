@@ -77,8 +77,8 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
     },
     title: {
       fontSize: "clamp(2rem, 6vw, 3rem)",
-      fontWeight: "900",
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      fontWeight: "700",
+      background: "linear-gradient(135deg, #2d3436 0%, #636e72 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
@@ -102,7 +102,7 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
     },
     emptyTitle: {
       fontSize: "clamp(1.5rem, 4vw, 2rem)",
-      fontWeight: "700",
+      fontWeight: "600",
       color: "#2d3436",
       marginBottom: "15px",
     },
@@ -112,16 +112,16 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
       marginBottom: "35px",
     },
     browseButton: {
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "18px 45px",
       borderRadius: "50px",
       fontSize: "1.1rem",
-      fontWeight: "700",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      boxShadow: "0 6px 20px rgba(102, 126, 234, 0.3)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
     },
     cartCard: {
       background: "white",
@@ -149,29 +149,26 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
     },
     itemName: {
       fontSize: "clamp(1.1rem, 3vw, 1.3rem)",
-      fontWeight: "700",
+      fontWeight: "600",
       color: "#2d3436",
       marginBottom: "8px",
     },
     itemPrice: {
       fontSize: "clamp(1.2rem, 3vw, 1.5rem)",
-      fontWeight: "800",
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
+      fontWeight: "700",
+      color: "#2d3436",
     },
     removeButton: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "12px 24px",
       borderRadius: "10px",
       cursor: "pointer",
       fontSize: "0.95rem",
-      fontWeight: "700",
+      fontWeight: "500",
       transition: "all 0.3s ease",
-      boxShadow: "0 4px 12px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
       whiteSpace: "nowrap",
     },
     totalSection: {
@@ -179,21 +176,18 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
       justifyContent: "space-between",
       alignItems: "center",
       padding: "30px 0",
-      borderTop: "3px solid #ff6b6b",
+      borderTop: "3px solid #5a6c7d",
       marginTop: "10px",
     },
     totalLabel: {
       fontSize: "clamp(1.4rem, 4vw, 1.8rem)",
-      fontWeight: "800",
+      fontWeight: "700",
       color: "#2d3436",
     },
     totalAmount: {
       fontSize: "clamp(1.8rem, 5vw, 2.5rem)",
-      fontWeight: "900",
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
+      fontWeight: "800",
+      color: "#2d3436",
     },
     formSection: {
       marginTop: "30px",
@@ -203,7 +197,7 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
       marginBottom: "12px",
       color: "#2d3436",
       fontSize: "1.1rem",
-      fontWeight: "700",
+      fontWeight: "600",
     },
     input: {
       width: "100%",
@@ -224,25 +218,25 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
     placeOrderButton: {
       flex: 1,
       minWidth: "200px",
-      background: "linear-gradient(135deg, #0be881 0%, #0fb866 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "20px 40px",
       borderRadius: "12px",
       fontSize: "1.2rem",
-      fontWeight: "800",
+      fontWeight: "600",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      boxShadow: "0 6px 20px rgba(11, 232, 129, 0.3)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
     },
     continueButton: {
       background: "white",
-      color: "#667eea",
-      border: "2px solid #667eea",
+      color: "#5a6c7d",
+      border: "2px solid #5a6c7d",
       padding: "18px 35px",
       borderRadius: "12px",
       fontSize: "1.05rem",
-      fontWeight: "700",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
       whiteSpace: "nowrap",
@@ -271,11 +265,11 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
             style={styles.browseButton}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-3px) scale(1.05)";
-              e.currentTarget.style.boxShadow = "0 8px 30px rgba(102, 126, 234, 0.4)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.15)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0) scale(1)";
-              e.currentTarget.style.boxShadow = "0 6px 20px rgba(102, 126, 234, 0.3)";
+              e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.12)";
             }}
           >
             Browse Menu
@@ -303,11 +297,11 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
                 style={styles.removeButton}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "scale(1.05)";
-                  e.currentTarget.style.boxShadow = "0 6px 18px rgba(255, 107, 107, 0.4)";
+                  e.currentTarget.style.boxShadow = "0 6px 18px rgba(0, 0, 0, 0.15)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "scale(1)";
-                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(255, 107, 107, 0.3)";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.12)";
                 }}
               >
                 Remove
@@ -333,8 +327,8 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
               onChange={(e) => setCustomerPhone(e.target.value)}
               style={styles.input}
               onFocus={(e) => {
-                e.currentTarget.style.borderColor = "#667eea";
-                e.currentTarget.style.boxShadow = "0 0 0 4px rgba(102, 126, 234, 0.1)";
+                e.currentTarget.style.borderColor = "#5a6c7d";
+                e.currentTarget.style.boxShadow = "0 0 0 4px rgba(90, 108, 125, 0.1)";
               }}
               onBlur={(e) => {
                 e.currentTarget.style.borderColor = "#ecf0f1";
@@ -356,13 +350,13 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
               onMouseEnter={(e) => {
                 if (!orderLoading) {
                   e.currentTarget.style.transform = "translateY(-3px)";
-                  e.currentTarget.style.boxShadow = "0 8px 30px rgba(11, 232, 129, 0.4)";
+                  e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.15)";
                 }
               }}
               onMouseLeave={(e) => {
                 if (!orderLoading) {
                   e.currentTarget.style.transform = "translateY(0)";
-                  e.currentTarget.style.boxShadow = "0 6px 20px rgba(11, 232, 129, 0.3)";
+                  e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.12)";
                 }
               }}
             >
@@ -373,12 +367,12 @@ const CartPage = ({ user, cart, removeFromCart, clearCart, setActivePage }) => {
               onClick={() => setActivePage("menu")}
               style={styles.continueButton}
               onMouseEnter={(e) => {
-                e.currentTarget.style.background = "#667eea";
+                e.currentTarget.style.background = "#5a6c7d";
                 e.currentTarget.style.color = "white";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.background = "white";
-                e.currentTarget.style.color = "#667eea";
+                e.currentTarget.style.color = "#5a6c7d";
               }}
             >
               Continue Shopping

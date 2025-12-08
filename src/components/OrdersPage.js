@@ -87,7 +87,7 @@ const OrdersPage = () => {
       if (response.ok) {
         console.log("✅ Order deleted successfully");
         // Show success notification
-        showNotification("✅ Order deleted successfully!", "#28a745");
+        showNotification("✅ Order deleted successfully!", "#5a6c7d");
         fetchOrders();
       } else if (response.status === 401) {
         alert("Session expired. Please login again.");
@@ -136,7 +136,7 @@ const OrdersPage = () => {
       padding: "8px 18px",
       borderRadius: "20px",
       fontSize: "0.9rem",
-      fontWeight: "700",
+      fontWeight: "600",
       textTransform: "capitalize",
       display: "inline-block",
       boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
@@ -146,20 +146,20 @@ const OrdersPage = () => {
       case "completed":
         return { 
           ...base, 
-          background: "linear-gradient(135deg, #0be881 0%, #0fb866 100%)",
+          background: "linear-gradient(135deg, #52b788 0%, #40916c 100%)",
           color: "white"
         };
       case "cancelled":
         return { 
           ...base, 
-          background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+          background: "linear-gradient(135deg, #8d8d8d 0%, #6c6c6c 100%)",
           color: "white"
         };
       default:
         return { 
           ...base, 
-          background: "linear-gradient(135deg, #feca57 0%, #ff9ff3 100%)",
-          color: "#2d3436"
+          background: "linear-gradient(135deg, #f4a261 0%, #e76f51 100%)",
+          color: "white"
         };
     }
   };
@@ -180,8 +180,8 @@ const OrdersPage = () => {
     },
     title: {
       fontSize: "clamp(2rem, 6vw, 3rem)",
-      fontWeight: "900",
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      fontWeight: "700",
+      background: "linear-gradient(135deg, #2d3436 0%, #636e72 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
@@ -205,16 +205,16 @@ const OrdersPage = () => {
       padding: "12px 28px",
       borderRadius: "50px",
       fontSize: "1rem",
-      fontWeight: "600",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
       color: "#2d3436",
     },
     activeFilter: {
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "2px solid transparent",
-      boxShadow: "0 4px 15px rgba(102, 126, 234, 0.3)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
     },
     ordersGrid: {
       maxWidth: "1200px",
@@ -243,7 +243,7 @@ const OrdersPage = () => {
     },
     orderId: {
       fontSize: "1.5rem",
-      fontWeight: "800",
+      fontWeight: "700",
       background: "linear-gradient(135deg, #2d3436 0%, #636e72 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
@@ -259,7 +259,7 @@ const OrdersPage = () => {
       gap: "12px",
     },
     infoLabel: {
-      fontWeight: "700",
+      fontWeight: "600",
       color: "#636e72",
       minWidth: "80px",
       fontSize: "0.95rem",
@@ -277,7 +277,7 @@ const OrdersPage = () => {
     },
     sectionTitle: {
       fontSize: "1.1rem",
-      fontWeight: "800",
+      fontWeight: "700",
       color: "#2d3436",
       marginBottom: "15px",
     },
@@ -299,11 +299,8 @@ const OrdersPage = () => {
       fontSize: "0.95rem",
     },
     itemPrice: {
-      fontWeight: "800",
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
+      fontWeight: "700",
+      color: "#2d3436",
       whiteSpace: "nowrap",
     },
     totalSection: {
@@ -311,21 +308,18 @@ const OrdersPage = () => {
       justifyContent: "space-between",
       marginTop: "20px",
       paddingTop: "20px",
-      borderTop: "3px solid #667eea",
+      borderTop: "3px solid #5a6c7d",
       alignItems: "center",
     },
     totalLabel: {
       fontSize: "1.3rem",
-      fontWeight: "800",
+      fontWeight: "700",
       color: "#2d3436",
     },
     totalAmount: {
       fontSize: "1.8rem",
-      fontWeight: "900",
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
+      fontWeight: "800",
+      color: "#2d3436",
     },
     deleteButton: {
       marginTop: "20px",
@@ -335,19 +329,19 @@ const OrdersPage = () => {
       justifyContent: "flex-end",
     },
     deleteBtn: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "12px 24px",
       borderRadius: "12px",
       fontSize: "1rem",
-      fontWeight: "700",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
       display: "flex",
       alignItems: "center",
       gap: "8px",
-      boxShadow: "0 4px 12px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
     },
     emptyState: {
       textAlign: "center",
@@ -365,7 +359,7 @@ const OrdersPage = () => {
     },
     emptyTitle: {
       fontSize: "clamp(1.5rem, 4vw, 2rem)",
-      fontWeight: "800",
+      fontWeight: "700",
       color: "#2d3436",
       marginBottom: "15px",
     },
@@ -386,16 +380,16 @@ const OrdersPage = () => {
       animation: "bounce 1s infinite",
     },
     retryButton: {
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "15px 35px",
       borderRadius: "50px",
       fontSize: "1.1rem",
-      fontWeight: "700",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      boxShadow: "0 6px 20px rgba(102, 126, 234, 0.3)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
     },
   };
 
@@ -418,7 +412,7 @@ const OrdersPage = () => {
         <div style={styles.emptyState}>
           <div style={styles.emptyIcon}>⚠️</div>
           <h2 style={styles.emptyTitle}>Oops!</h2>
-          <p style={{ ...styles.emptyText, color: "#ff6b6b", marginBottom: "30px" }}>
+          <p style={{ ...styles.emptyText, color: "#5a6c7d", marginBottom: "30px" }}>
             {error}
           </p>
           <button
@@ -426,11 +420,11 @@ const OrdersPage = () => {
             style={styles.retryButton}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-3px)";
-              e.currentTarget.style.boxShadow = "0 8px 30px rgba(102, 126, 234, 0.4)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.15)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = "translateY(0)";
-              e.currentTarget.style.boxShadow = "0 6px 20px rgba(102, 126, 234, 0.3)";
+              e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.12)";
             }}
           >
             Try Again
@@ -600,13 +594,13 @@ const OrdersPage = () => {
                     onMouseEnter={(e) => {
                       if (!isDeleting) {
                         e.currentTarget.style.transform = "scale(1.05)";
-                        e.currentTarget.style.boxShadow = "0 6px 18px rgba(255, 107, 107, 0.4)";
+                        e.currentTarget.style.boxShadow = "0 6px 18px rgba(0, 0, 0, 0.15)";
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (!isDeleting) {
                         e.currentTarget.style.transform = "scale(1)";
-                        e.currentTarget.style.boxShadow = "0 4px 12px rgba(255, 107, 107, 0.3)";
+                        e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.12)";
                       }
                     }}
                   >

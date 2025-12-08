@@ -65,7 +65,7 @@ const RegisterPage = ({ setUser, setActivePage }) => {
       display: "flex",
       alignItems: "center",
       justifyContent: "center",
-      background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
       padding: "40px 20px",
     },
     card: {
@@ -73,7 +73,7 @@ const RegisterPage = ({ setUser, setActivePage }) => {
       width: "100%",
       background: "white",
       borderRadius: "24px",
-      boxShadow: "0 20px 60px rgba(0,0,0,0.3)",
+      boxShadow: "0 20px 60px rgba(0,0,0,0.15)",
       padding: "50px 40px",
       position: "relative",
       overflow: "hidden",
@@ -83,8 +83,8 @@ const RegisterPage = ({ setUser, setActivePage }) => {
       width: "200px",
       height: "200px",
       borderRadius: "50%",
-      background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      opacity: 0.1,
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
+      opacity: 0.08,
       top: "-100px",
       left: "-100px",
     },
@@ -100,7 +100,7 @@ const RegisterPage = ({ setUser, setActivePage }) => {
     },
     title: {
       fontSize: "clamp(1.8rem, 5vw, 2.2rem)",
-      fontWeight: "900",
+      fontWeight: "700",
       background: "linear-gradient(135deg, #2d3436 0%, #636e72 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
@@ -110,17 +110,17 @@ const RegisterPage = ({ setUser, setActivePage }) => {
     subtitle: {
       color: "#636e72",
       fontSize: "clamp(0.95rem, 3vw, 1.05rem)",
-      fontWeight: "500",
+      fontWeight: "400",
     },
     errorBox: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)",
       color: "white",
       padding: "15px 20px",
       borderRadius: "12px",
       marginBottom: "25px",
       fontSize: "0.95rem",
-      fontWeight: "600",
-      boxShadow: "0 4px 12px rgba(255, 107, 107, 0.3)",
+      fontWeight: "500",
+      boxShadow: "0 4px 12px rgba(231, 76, 60, 0.25)",
       display: "flex",
       alignItems: "center",
       gap: "10px",
@@ -152,14 +152,14 @@ const RegisterPage = ({ setUser, setActivePage }) => {
       width: "100%",
       padding: "18px 20px",
       fontSize: "1.1rem",
-      fontWeight: "800",
-      background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
+      fontWeight: "600",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       borderRadius: "12px",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      boxShadow: "0 6px 20px rgba(240, 147, 251, 0.4)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
       marginTop: "10px",
     },
     buttonDisabled: {
@@ -173,11 +173,8 @@ const RegisterPage = ({ setUser, setActivePage }) => {
       color: "#636e72",
     },
     link: {
-      background: "linear-gradient(135deg, #f093fb 0%, #f5576c 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
-      fontWeight: "700",
+      color: "#5a6c7d",
+      fontWeight: "600",
       cursor: "pointer",
       textDecoration: "none",
       transition: "all 0.2s ease",
@@ -214,9 +211,9 @@ const RegisterPage = ({ setUser, setActivePage }) => {
               disabled={loading}
               style={styles.input}
               onFocus={(e) => {
-                e.target.style.borderColor = "#f093fb";
+                e.target.style.borderColor = "#5a6c7d";
                 e.target.style.backgroundColor = "white";
-                e.target.style.boxShadow = "0 0 0 4px rgba(240, 147, 251, 0.1)";
+                e.target.style.boxShadow = "0 0 0 4px rgba(90, 108, 125, 0.1)";
               }}
               onBlur={(e) => {
                 e.target.style.borderColor = "#ecf0f1";
@@ -237,9 +234,9 @@ const RegisterPage = ({ setUser, setActivePage }) => {
               disabled={loading}
               style={styles.input}
               onFocus={(e) => {
-                e.target.style.borderColor = "#f093fb";
+                e.target.style.borderColor = "#5a6c7d";
                 e.target.style.backgroundColor = "white";
-                e.target.style.boxShadow = "0 0 0 4px rgba(240, 147, 251, 0.1)";
+                e.target.style.boxShadow = "0 0 0 4px rgba(90, 108, 125, 0.1)";
               }}
               onBlur={(e) => {
                 e.target.style.borderColor = "#ecf0f1";
@@ -260,9 +257,9 @@ const RegisterPage = ({ setUser, setActivePage }) => {
               disabled={loading}
               style={styles.input}
               onFocus={(e) => {
-                e.target.style.borderColor = "#f093fb";
+                e.target.style.borderColor = "#5a6c7d";
                 e.target.style.backgroundColor = "white";
-                e.target.style.boxShadow = "0 0 0 4px rgba(240, 147, 251, 0.1)";
+                e.target.style.boxShadow = "0 0 0 4px rgba(90, 108, 125, 0.1)";
               }}
               onBlur={(e) => {
                 e.target.style.borderColor = "#ecf0f1";
@@ -283,9 +280,9 @@ const RegisterPage = ({ setUser, setActivePage }) => {
               disabled={loading}
               style={styles.input}
               onFocus={(e) => {
-                e.target.style.borderColor = "#f093fb";
+                e.target.style.borderColor = "#5a6c7d";
                 e.target.style.backgroundColor = "white";
-                e.target.style.boxShadow = "0 0 0 4px rgba(240, 147, 251, 0.1)";
+                e.target.style.boxShadow = "0 0 0 4px rgba(90, 108, 125, 0.1)";
               }}
               onBlur={(e) => {
                 e.target.style.borderColor = "#ecf0f1";
@@ -305,13 +302,13 @@ const RegisterPage = ({ setUser, setActivePage }) => {
             onMouseEnter={(e) => {
               if (!loading) {
                 e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 8px 30px rgba(240, 147, 251, 0.5)";
+                e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.15)";
               }
             }}
             onMouseLeave={(e) => {
               if (!loading) {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 6px 20px rgba(240, 147, 251, 0.4)";
+                e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.12)";
               }
             }}
           >

@@ -116,7 +116,7 @@ function App() {
     },
     logoIcon: {
       fontSize: "2rem",
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #2d3436 0%, #1a1a1a 100%)",
       WebkitBackgroundClip: "text",
       WebkitTextFillColor: "transparent",
       backgroundClip: "text",
@@ -163,30 +163,30 @@ function App() {
       borderRadius: "10px",
       cursor: "pointer",
       fontSize: "clamp(0.95rem, 2.5vw, 1rem)",
-      fontWeight: "600",
+      fontWeight: "500",
       transition: "all 0.3s ease",
       position: "relative",
     },
     activeNavButton: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
-      boxShadow: "0 4px 12px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
     },
     cartButton: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "10px 20px",
       borderRadius: "10px",
       cursor: "pointer",
       fontSize: "clamp(0.95rem, 2.5vw, 1rem)",
-      fontWeight: "600",
+      fontWeight: "500",
       transition: "all 0.3s ease",
       position: "relative",
       display: "flex",
       alignItems: "center",
       gap: "8px",
-      boxShadow: "0 4px 12px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
     },
     cartBadge: {
       position: "absolute",
@@ -206,16 +206,16 @@ function App() {
       border: "2px solid white",
     },
     loginButton: {
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "10px 28px",
       borderRadius: "10px",
       cursor: "pointer",
       fontSize: "clamp(0.95rem, 2.5vw, 1rem)",
-      fontWeight: "700",
+      fontWeight: "500",
       transition: "all 0.3s ease",
-      boxShadow: "0 4px 12px rgba(102, 126, 234, 0.3)",
+      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
     },
     userSection: {
       display: "flex",
@@ -230,20 +230,20 @@ function App() {
     welcomeText: {
       color: "#2d3436",
       fontSize: "clamp(0.9rem, 2.5vw, 1rem)",
-      fontWeight: "600",
+      fontWeight: "500",
       margin: 0,
     },
     logoutButton: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "8px 20px",
       borderRadius: "20px",
       cursor: "pointer",
       fontSize: "clamp(0.85rem, 2.5vw, 0.9rem)",
-      fontWeight: "700",
+      fontWeight: "500",
       transition: "all 0.3s ease",
-      boxShadow: "0 2px 8px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 2px 8px rgba(0, 0, 0, 0.12)",
     },
   };
 
@@ -347,11 +347,11 @@ function App() {
             }}
             onMouseEnter={(e) => {
               e.currentTarget.style.transform = "translateY(-2px) scale(1.05)";
-              e.currentTarget.style.boxShadow = "0 6px 20px rgba(255, 107, 107, 0.4)";
+              e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.2)";
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = activePage === "cart" ? "scale(1.05)" : "translateY(0) scale(1)";
-              e.currentTarget.style.boxShadow = "0 4px 12px rgba(255, 107, 107, 0.3)";
+              e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
             }}
           >
             🛒 Cart
@@ -386,11 +386,11 @@ function App() {
               style={styles.loginButton}
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = "translateY(-2px)";
-                e.currentTarget.style.boxShadow = "0 6px 20px rgba(102, 126, 234, 0.4)";
+                e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.2)";
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 4px 12px rgba(102, 126, 234, 0.3)";
+                e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
               }}
             >
               🔐 Login
@@ -405,11 +405,11 @@ function App() {
                 style={styles.logoutButton}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.transform = "scale(1.05)";
-                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(255, 107, 107, 0.4)";
+                  e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.2)";
                 }}
                 onMouseLeave={(e) => {
                   e.currentTarget.style.transform = "scale(1)";
-                  e.currentTarget.style.boxShadow = "0 2px 8px rgba(255, 107, 107, 0.3)";
+                  e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.15)";
                 }}
               >
                 Logout

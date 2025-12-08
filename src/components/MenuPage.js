@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from "react";
 import { API_BASE } from "../config/api";
 
@@ -29,38 +30,43 @@ const MenuPage = ({ user, addToCart }) => {
 
   const styles = {
     hero: {
-      background: "linear-gradient(135deg, #667eea 0%, #764ba2 100%)",
+      background: "linear-gradient(135deg, #fafafa 0%, #f5f3ee 100%)",
       padding: "80px 20px",
       textAlign: "center",
-      color: "white",
+      color: "#2d3436",
       position: "relative",
       overflow: "hidden",
     },
     heroTitle: {
       fontSize: "clamp(2.5rem, 8vw, 4rem)",
-      fontWeight: "900",
+      fontWeight: "700",
       marginBottom: "20px",
-      textShadow: "0 4px 20px rgba(0,0,0,0.2)",
+      background: "linear-gradient(135deg, #2d3436 0%, #636e72 100%)",
+      WebkitBackgroundClip: "text",
+      WebkitTextFillColor: "transparent",
+      backgroundClip: "text",
+      textShadow: "none",
       letterSpacing: "-1px",
     },
     heroSubtitle: {
       fontSize: "clamp(1.1rem, 3vw, 1.4rem)",
       fontWeight: "400",
-      opacity: 0.95,
+      color: "#636e72",
+      opacity: 1,
       maxWidth: "600px",
       margin: "0 auto 40px",
       lineHeight: "1.6",
     },
     heroButton: {
-      background: "white",
-      color: "#667eea",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
+      color: "white",
       border: "none",
       padding: "18px 40px",
       borderRadius: "50px",
       fontSize: "1.1rem",
-      fontWeight: "700",
+      fontWeight: "500",
       cursor: "pointer",
-      boxShadow: "0 8px 25px rgba(0,0,0,0.2)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
       transition: "all 0.3s ease",
     },
     container: {
@@ -70,7 +76,7 @@ const MenuPage = ({ user, addToCart }) => {
     },
     sectionTitle: {
       fontSize: "clamp(2rem, 5vw, 2.8rem)",
-      fontWeight: "800",
+      fontWeight: "700",
       textAlign: "center",
       marginBottom: "20px",
       background: "linear-gradient(135deg, #2d3436 0%, #636e72 100%)",
@@ -99,16 +105,16 @@ const MenuPage = ({ user, addToCart }) => {
       padding: "12px 28px",
       borderRadius: "50px",
       fontSize: "1rem",
-      fontWeight: "600",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
       color: "#2d3436",
     },
     activeCategoryButton: {
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "2px solid transparent",
-      boxShadow: "0 4px 15px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
     },
     menuGrid: {
       display: "grid",
@@ -152,31 +158,28 @@ const MenuPage = ({ user, addToCart }) => {
     },
     itemName: {
       fontSize: "1.4rem",
-      fontWeight: "700",
+      fontWeight: "600",
       color: "#2d3436",
       marginBottom: "12px",
     },
     itemPrice: {
       fontSize: "1.8rem",
-      fontWeight: "800",
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
-      WebkitBackgroundClip: "text",
-      WebkitTextFillColor: "transparent",
-      backgroundClip: "text",
+      fontWeight: "700",
+      color: "#2d3436",
       marginBottom: "20px",
     },
     addButton: {
       width: "100%",
-      background: "linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%)",
+      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
       color: "white",
       border: "none",
       padding: "15px",
       borderRadius: "12px",
       fontSize: "1.05rem",
-      fontWeight: "700",
+      fontWeight: "500",
       cursor: "pointer",
       transition: "all 0.3s ease",
-      boxShadow: "0 4px 15px rgba(255, 107, 107, 0.3)",
+      boxShadow: "0 4px 15px rgba(0, 0, 0, 0.12)",
     },
     loader: {
       display: "flex",
@@ -200,7 +203,7 @@ const MenuPage = ({ user, addToCart }) => {
       {/* Hero Section */}
       <section style={styles.hero}>
         <h1 style={styles.heroTitle}>
-          Delicious Food Delivered 🍕
+          Delicious Food Delivered ✨
         </h1>
         <p style={styles.heroSubtitle}>
           Craving something tasty? Order from our curated menu of mouth-watering dishes, 
@@ -211,11 +214,11 @@ const MenuPage = ({ user, addToCart }) => {
           onClick={() => document.getElementById('menu-section').scrollIntoView({ behavior: 'smooth' })}
           onMouseEnter={(e) => {
             e.currentTarget.style.transform = "translateY(-3px) scale(1.05)";
-            e.currentTarget.style.boxShadow = "0 12px 35px rgba(0,0,0,0.25)";
+            e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.2)";
           }}
           onMouseLeave={(e) => {
             e.currentTarget.style.transform = "translateY(0) scale(1)";
-            e.currentTarget.style.boxShadow = "0 8px 25px rgba(0,0,0,0.2)";
+            e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.15)";
           }}
         >
           Explore Menu 👇
@@ -303,11 +306,11 @@ const MenuPage = ({ user, addToCart }) => {
                   style={styles.addButton}
                   onMouseEnter={(e) => {
                     e.currentTarget.style.transform = "translateY(-2px)";
-                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(255, 107, 107, 0.4)";
+                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(0, 0, 0, 0.2)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(255, 107, 107, 0.3)";
+                    e.currentTarget.style.boxShadow = "0 4px 15px rgba(0, 0, 0, 0.15)";
                   }}
                 >
                   Add to Cart 🛒
