@@ -4,7 +4,9 @@ import OrdersPage from "./components/OrdersPage";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 import CartPage from "./components/CartPage";
-import { FiUser } from 'react-icons/fi';  // Outlined person, no circle
+import { HiOutlineUser } from 'react-icons/hi';
+import { HiOutlineShoppingCart } from 'react-icons/hi';
+import { MdOutlineRestaurantMenu } from 'react-icons/md';
 
 function App() {
   const [activePage, setActivePage] = useState("menu");
@@ -173,22 +175,18 @@ function App() {
       color: "white",
       boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
     },
-    cartButton: {
-      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
-      color: "white",
-      border: "none",
-      padding: "10px 20px",
-      borderRadius: "10px",
-      cursor: "pointer",
-      fontSize: "clamp(0.95rem, 2.5vw, 1rem)",
-      fontWeight: "500",
-      transition: "all 0.3s ease",
-      position: "relative",
-      display: "flex",
-      alignItems: "center",
-      gap: "8px",
-      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
-    },
+   cartButton: {
+  background: "transparent",
+  color: "#2d3436",
+  border: "none",
+  padding: "10px",
+  cursor: "pointer",
+  transition: "all 0.3s ease",
+  position: "relative",
+  display: "flex",
+  alignItems: "center",
+  gap: "8px",
+},
     cartBadge: {
       position: "absolute",
       top: "-8px",
@@ -333,7 +331,7 @@ function App() {
               }
             }}
           >
-            🍽️ Menu
+              <MdOutlineRestaurantMenu size={28} />
           </button>
 
           <button
@@ -351,7 +349,7 @@ function App() {
               e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
             }}
           >
-            🛒 Cart
+            <HiOutlineShoppingCart size={28} />  👈 REPLACE "🛒 Cart" with this
             {cart.length > 0 && (
               <span style={styles.cartBadge}>{cart.length}</span>
             )}
@@ -390,7 +388,7 @@ function App() {
                 e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
               }}
             >
-              <FiUser size={28} />
+              <HiOutlineUser size={28} />
             </button>
           ) : (
             <div style={styles.userSection} className="user-section">
@@ -424,7 +422,7 @@ function App() {
                 ...(activePage === "menu" ? styles.activeNavButton : {}),
               }}
             >
-              🍽️ Menu
+              <MdOutlineRestaurantMenu size={28} />
             </button>
 
             <button
@@ -435,7 +433,7 @@ function App() {
                 justifyContent: "center",
               }}
             >
-              🛒 Cart
+              <HiOutlineShoppingCart size={28} />  👈 REPLACE "🛒 Cart" with this
               {cart.length > 0 && (
                 <span style={styles.cartBadge}>{cart.length}</span>
               )}
@@ -456,7 +454,7 @@ function App() {
                 onClick={() => handleNavClick("login")}
                 style={{...styles.loginButton, width: "100%"}}
               >
-                <FiUser size={28} />
+               <HiOutlineUser size={28} />
               </button>
             ) : (
               <div style={{...styles.userSection, width: "100%", justifyContent: "center"}}>
