@@ -433,7 +433,7 @@ function App() {
                 justifyContent: "center",
               }}
             >
-              <HiOutlineShoppingCart size={28} />  👈 REPLACE "🛒 Cart" with this
+              <HiOutlineShoppingCart size={28} /> 
               {cart.length > 0 && (
                 <span style={styles.cartBadge}>{cart.length}</span>
               )}
