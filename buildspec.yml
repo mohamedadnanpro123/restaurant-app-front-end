@@ -17,7 +17,7 @@ phases:
     commands:
       - echo "✅ Build successful!"
       - echo "🚀 Deploying to S3..."
-      - aws s3 sync build/ s3://restaurant-react-app-00009/ --delete --exclude "dynamic-images/*" --exclude "*.zip" --exclude "*dump*"
+      - aws s3 sync build/ s3://restaurant-react-app-00009/ --delete --exclude "dynamic-images/*" --exclude "*.sql" --exclude "*.zip" --exclude "*dump*"
       - echo "🔄 Invalidating CloudFront cache..."
       - aws cloudfront create-invalidation --distribution-id E2U5JJQA48C47Z --paths "/*"
       - echo "✨ Deployment complete!"

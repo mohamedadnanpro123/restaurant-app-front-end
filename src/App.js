@@ -4,6 +4,7 @@ import OrdersPage from "./components/OrdersPage";
 import LoginPage from "./components/LoginPage";
 import RegisterPage from "./components/RegisterPage";
 import CartPage from "./components/CartPage";
+import { FaUserCircle } from 'react-icons/fa';
 
 function App() {
   const [activePage, setActivePage] = useState("menu");
@@ -393,7 +394,7 @@ function App() {
                 e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
               }}
             >
-              🔐 Login
+              <FaUserCircle size={20} />
             </button>
           ) : (
             <div style={styles.userSection} className="user-section">
@@ -459,7 +460,7 @@ function App() {
                 onClick={() => handleNavClick("login")}
                 style={{...styles.loginButton, width: "100%"}}
               >
-                🔐 Login
+                <FaUserCircle size={20} />
               </button>
             ) : (
               <div style={{...styles.userSection, width: "100%", justifyContent: "center"}}>
