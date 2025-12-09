@@ -159,20 +159,20 @@ function App() {
       padding: "20px 0",
       borderTop: "1px solid #ecf0f1",
     },
-    navButton: {
-  backgroundColor: "transparent",
+   navButton: {
+  background: "transparent",  // 👈 Changed
   color: "#2d3436",
   border: "none",
-  padding: "10px",  // 👈 Reduced padding
+  padding: "10px",  // 👈 Less padding
   cursor: "pointer",
   transition: "all 0.3s ease",
   position: "relative",
 },
     activeNavButton: {
-      background: "linear-gradient(135deg, #5a6c7d 0%, #4a5568 100%)",
-      color: "white",
-      boxShadow: "0 4px 12px rgba(0, 0, 0, 0.12)",
-    },
+  background: "transparent",  // 👈 No background
+  color: "#5a6c7d",  // 👈 Just darker color
+  boxShadow: "none",
+},
    cartButton: {
   background: "transparent",
   color: "#2d3436",
