@@ -349,7 +349,7 @@ function App() {
               e.currentTarget.style.boxShadow = "0 4px 12px rgba(0, 0, 0, 0.15)";
             }}
           >
-            <HiOutlineShoppingCart size={28} />  👈 REPLACE "🛒 Cart" with this
+            <HiOutlineShoppingCart size={28} /> 
             {cart.length > 0 && (
               <span style={styles.cartBadge}>{cart.length}</span>
             )}
@@ -436,7 +436,7 @@ function App() {
               <HiOutlineShoppingCart size={28} /> 
               {cart.length > 0 && (
                 <span style={styles.cartBadge}>{cart.length}</span>
-              )}
+              )} 
             </button>
 
             <button
