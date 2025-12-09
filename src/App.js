@@ -6,7 +6,7 @@ import RegisterPage from "./components/RegisterPage";
 import CartPage from "./components/CartPage";
 import { HiOutlineUser } from 'react-icons/hi';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
-import { MdOutlineRestaurantMenu } from 'react-icons/md';
+import { HiOutlineClipboardList } from 'react-icons/hi';
 
 function App() {
   const [activePage, setActivePage] = useState("menu");
@@ -331,7 +331,7 @@ function App() {
               }
             }}
           >
-              <MdOutlineRestaurantMenu size={28} />
+            
           </button>
 
           <button
@@ -372,7 +372,7 @@ function App() {
               }
             }}
           >
-            📋 Orders
+            <HiOutlineClipboardList size={28} />
           </button>
 
           {!user ? (
@@ -446,7 +446,7 @@ function App() {
                 ...(activePage === "orders" ? styles.activeNavButton : {}),
               }}
             >
-              📋 Orders
+              <HiOutlineClipboardList size={28} />
             </button>
 
             {!user ? (
