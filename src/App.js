@@ -7,6 +7,7 @@ import CartPage from "./components/CartPage";
 import { HiOutlineUser } from 'react-icons/hi';
 import { HiOutlineShoppingCart } from 'react-icons/hi';
 import { HiOutlineClipboardList } from 'react-icons/hi';
+import { MdOutlineRestaurantMenu } from 'react-icons/md';
 
 function App() {
   const [activePage, setActivePage] = useState("menu");
