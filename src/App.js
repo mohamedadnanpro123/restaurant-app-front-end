@@ -207,8 +207,10 @@ function App() {
     color: "#2d3436",
     border: "none",
     padding: "10px",
+    outline: "none",  // 👈 ADD THIS
     cursor: "pointer",
     transition: "all 0.3s ease",
+    outline: "none",  // 👈 ADD THIS
     },
     userSection: {
       display: "flex",
