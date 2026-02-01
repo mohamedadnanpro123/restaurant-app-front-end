@@ -8,7 +8,7 @@ const MenuPage = ({ user, addToCart }) => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
   useEffect(() => {
-    fetch(`${API_BASE}/api/menu`)
+    fetch(`${API_BASE}/menu`)
       .then((res) => res.json())
       .then((data) => {
         setMenuItems(data);
