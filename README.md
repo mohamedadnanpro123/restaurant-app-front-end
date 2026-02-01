@@ -3,7 +3,7 @@
 Production React frontend for the Restaurant Management Platform, deployed to **AWS S3 + CloudFront CDN** with an automated GitHub Actions pipeline.
 
 ## 🌐 Live Website
-[www.restaurantsolutions.shop](https://www.restaurantsolutions.shop)
+[www.restaurantsolutions.shop](https://www.restaurantsolutions.shop)(https://app.restaurantsolutions.shop)
 
 ---
 
