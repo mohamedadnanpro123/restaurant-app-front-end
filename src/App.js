@@ -210,7 +210,7 @@ function App() {
     outline: "none",  // 👈 ADD THIS
     cursor: "pointer",
     transition: "all 0.3s ease",
-    outline: "none",  // 👈 ADD THIS
+    
     },
     userSection: {
       display: "flex",
