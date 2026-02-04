@@ -39,6 +39,7 @@ jobs:
         run: |
           aws s3 sync build s3://${{ env.S3_BUCKET }} \
             --exclude "dynamic-images/*" \
+            --exclude "restaurant_dump7.zip" \
             --delete
           
           echo "✅ Frontend deployed to S3!"

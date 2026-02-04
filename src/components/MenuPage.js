@@ -133,7 +133,7 @@ const MenuPage = ({ user, addToCart }) => {
     imageContainer: {
       position: "relative",
       width: "100%",
-      height: "250px",
+      height: "180px",
       overflow: "hidden",
       background: "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)",
     },
@@ -142,6 +142,7 @@ const MenuPage = ({ user, addToCart }) => {
       height: "100%",
       objectFit: "cover",
       transition: "transform 0.4s ease",
+      transform: "scale(1)", // ✅ correct reset
     },
     imageOverlay: {
       position: "absolute",
